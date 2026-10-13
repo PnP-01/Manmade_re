@@ -1,0 +1,194 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/fase.gd" id="1_fase"]
+[ext_resource type="PackedScene" path="res://cenas/jogador.tscn" id="2_jog"]
+[ext_resource type="PackedScene" path="res://cenas/plataforma.tscn" id="3_plat"]
+[ext_resource type="PackedScene" path="res://cenas/porta.tscn" id="4_porta"]
+[ext_resource type="PackedScene" path="res://cenas/inimigo.tscn" id="5_ini"]
+[ext_resource type="PackedScene" path="res://cenas/ui/pausa.tscn" id="6_pausa"]
+[ext_resource type="PackedScene" path="res://cenas/ui/resultado.tscn" id="7_res"]
+
+[node name="Fase2" type="Node2D"]
+script = ExtResource("1_fase")
+numero_fase = 2
+largura_fase = 4400
+
+[node name="Fundo" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Cor" type="ColorRect" parent="Fundo"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.22, 0.22, 0.26, 1)
+
+[node name="Chao1" parent="." instance=ExtResource("3_plat")]
+position = Vector2(500, 604)
+tamanho = Vector2(1000, 88)
+cor = Color(0.1, 0.1, 0.12, 1)
+
+[node name="Chao2" parent="." instance=ExtResource("3_plat")]
+position = Vector2(1570, 604)
+tamanho = Vector2(860, 88)
+cor = Color(0.1, 0.1, 0.12, 1)
+
+[node name="Chao3" parent="." instance=ExtResource("3_plat")]
+position = Vector2(2575, 604)
+tamanho = Vector2(850, 88)
+cor = Color(0.1, 0.1, 0.12, 1)
+
+[node name="Chao4" parent="." instance=ExtResource("3_plat")]
+position = Vector2(3770, 604)
+tamanho = Vector2(1260, 88)
+cor = Color(0.1, 0.1, 0.12, 1)
+
+[node name="P1" parent="." instance=ExtResource("3_plat")]
+position = Vector2(500, 482)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P2" parent="." instance=ExtResource("3_plat")]
+position = Vector2(780, 482)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P3" parent="." instance=ExtResource("3_plat")]
+position = Vector2(1070, 482)
+tamanho = Vector2(120, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P4" parent="." instance=ExtResource("3_plat")]
+position = Vector2(1500, 482)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P5" parent="." instance=ExtResource("3_plat")]
+position = Vector2(1750, 392)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P6" parent="." instance=ExtResource("3_plat")]
+position = Vector2(2075, 482)
+tamanho = Vector2(120, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P7" parent="." instance=ExtResource("3_plat")]
+position = Vector2(2500, 482)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P8" parent="." instance=ExtResource("3_plat")]
+position = Vector2(2780, 392)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P9" parent="." instance=ExtResource("3_plat")]
+position = Vector2(3070, 482)
+tamanho = Vector2(120, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P10" parent="." instance=ExtResource("3_plat")]
+position = Vector2(3600, 482)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="P11" parent="." instance=ExtResource("3_plat")]
+position = Vector2(3900, 392)
+tamanho = Vector2(160, 24)
+cor = Color(0.4, 0.4, 0.45, 1)
+
+[node name="Porta" parent="." instance=ExtResource("4_porta")]
+position = Vector2(4300, 520)
+
+[node name="Mecanico1" parent="." instance=ExtResource("5_ini")]
+position = Vector2(600, 532)
+tipo = "mecanico"
+distancia_patrulha = 120.0
+intervalo_tiro = 2.2
+
+[node name="Atirador1" parent="." instance=ExtResource("5_ini")]
+position = Vector2(900, 532)
+tipo = "atirador"
+distancia_patrulha = 0.0
+intervalo_tiro = 2.2
+
+[node name="Mecanico2" parent="." instance=ExtResource("5_ini")]
+position = Vector2(1300, 532)
+tipo = "mecanico"
+distancia_patrulha = 120.0
+intervalo_tiro = 2.2
+
+[node name="Atirador2" parent="." instance=ExtResource("5_ini")]
+position = Vector2(1800, 532)
+tipo = "atirador"
+distancia_patrulha = 0.0
+intervalo_tiro = 2.2
+
+[node name="Mecanico3" parent="." instance=ExtResource("5_ini")]
+position = Vector2(2400, 532)
+tipo = "mecanico"
+distancia_patrulha = 120.0
+intervalo_tiro = 2.2
+
+[node name="Atirador3" parent="." instance=ExtResource("5_ini")]
+position = Vector2(2850, 532)
+tipo = "atirador"
+distancia_patrulha = 0.0
+intervalo_tiro = 2.2
+
+[node name="Mecanico4" parent="." instance=ExtResource("5_ini")]
+position = Vector2(3400, 532)
+tipo = "mecanico"
+distancia_patrulha = 150.0
+intervalo_tiro = 2.2
+
+[node name="Atirador4" parent="." instance=ExtResource("5_ini")]
+position = Vector2(3900, 532)
+tipo = "atirador"
+distancia_patrulha = 0.0
+intervalo_tiro = 2.2
+
+[node name="Jogador" parent="." instance=ExtResource("2_jog")]
+position = Vector2(100, 520)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Titulo" type="Label" parent="UI"]
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 780.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 28
+text = "Título"
+
+[node name="Cronometro" type="Label" parent="UI"]
+offset_left = 800.0
+offset_top = 20.0
+offset_right = 1128.0
+offset_bottom = 64.0
+theme_override_font_sizes/font_size = 28
+text = "00:00.0"
+horizontal_alignment = 2
+
+[node name="Descricao" type="Label" parent="UI"]
+offset_left = 24.0
+offset_top = 70.0
+offset_right = 1128.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 18
+text = "Descrição"
+autowrap_mode = 3
+
+[node name="Ajuda" type="Label" parent="UI"]
+offset_left = 24.0
+offset_top = 610.0
+offset_right = 1128.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 16
+text = "A D / ← →  mover   |   W ↑ ESPAÇO  pular (pule na cabeça dos inimigos)   |   S ↓  agachar   |   ESC  pausa"
+
+[node name="Pausa" parent="." instance=ExtResource("6_pausa")]
+
+[node name="Resultado" parent="." instance=ExtResource("7_res")]
